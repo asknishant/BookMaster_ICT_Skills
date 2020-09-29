@@ -40,7 +40,7 @@ namespace practice_project
             if(properties=="Add")
             {
                 string conString = @"Data Source = NISHANT\NISHANT; Initial Catalog = BookMaster; Integrated Security = True";
-                string sqlcmd = "Insert into [Customers] Values('"+ textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+textBox6.Text+"')";
+                string sqlcmd = "Insert into [Customers] Values('"+ textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox7.Text+"','"+textBox5.Text+"','"+textBox6.Text+"')";
                 SqlConnection con = new SqlConnection(conString);
                 dataAdapter = new SqlDataAdapter(sqlcmd, con);
                 pagingDs = new DataSet();
@@ -56,7 +56,7 @@ namespace practice_project
             if (properties == "Edit")
             {
                 string conString = @"Data Source = NISHANT\NISHANT; Initial Catalog = BookMaster; Integrated Security = True";
-                string sqlcmd = "Update [Customers] set Name = '"+ textBox2.Text + "'Address = '"+textBox2.Text+"'Zip ='"+textBox3.Text+"'city ='"+textBox4.Text+"'Phone = '"+textBox5.Text+"'Email = '"+textBox6.Text+"'";
+                string sqlcmd = "UPDATE [Customers] SET Name = '" + textBox2.Text + "', Address = '" + textBox3.Text + "',Zip = '" + textBox4.Text + "',City='" + textBox7.Text + "',Phone ='" + textBox5.Text + "',Email='" + textBox6.Text + "'WHERE ID = '" + textBox1.Text + "';";
                 SqlConnection con = new SqlConnection(conString);
                 dataAdapter = new SqlDataAdapter(sqlcmd, con);
                 pagingDs = new DataSet();

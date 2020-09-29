@@ -129,5 +129,47 @@ namespace practice_project
             frm3.Show();
             this.Hide();
         }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void booksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Books bks = new Books();
+            bks.Show();
+        }
+
+        private void authorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Authors author = new Authors();
+            author.Show();
+        }
+
+        private void bookAuthorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookAuthors bauthor = new BookAuthors();
+            bauthor.Show();
+        }
+
+        private void bookCoverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookCover author = new BookCover();
+            author.Show();
+        }
+
+        private void bookSubjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookSubjects author = new BookSubjects();
+            author.Show();
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports reports = new Reports();
+            reports.Show();
+        }
     }
 }

@@ -48,15 +48,16 @@ namespace practice_project
             }
             try
             {
-                string conString = @"Data Source=DESKTOP-RP9S7ET;Initial Catalog=BookMaster;Integrated Security=True";
+                string conString = @"Data Source=NISHANT\NISHANT;Initial Catalog=BookMaster;Integrated Security=True";
                 string cmd = "INSERT INTO [BookCovers] VALUES(" + textBox1.Text + ",'" + comboBox1.SelectedValue + "')";
                 SqlConnection con = new SqlConnection(conString);
 
                 con.Open();
                 SqlCommand sqlCommand = new SqlCommand(cmd, con);
                 sqlCommand.ExecuteNonQuery();
-
+                
                 con.Close();
+               
                 MessageBox.Show("Added Successfully");
 
             }
@@ -65,6 +66,7 @@ namespace practice_project
                 MessageBox.Show(ex.Message);
             }
         }
-    
     }
+
+
 }
